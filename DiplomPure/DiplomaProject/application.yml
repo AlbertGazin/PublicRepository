@@ -17,14 +17,14 @@ spring:
 blog:
   title: Developers Blog
   subtitle: Рассказы разработчиков
-  phone: +7 987 275-97-51
-  email: gazin.albert@mail.ru
+  phone: +7 987 299-99-99
+  email: gazinos.albertinos@mail.ru
   copyright: Альберт Газин
   copyrightFrom: 2005
 
 email:
-  from: "albertino.gazinio@gmail.com"
-  pass: "Alberto1988gmailcom@"
+  from: "albertinos.gazinios@gmail.com"
+  pass: "Alb1988gmailcom@999_fox"
   subject: "Restore password"
   host: "smtp.gmail.com"
   port: 587

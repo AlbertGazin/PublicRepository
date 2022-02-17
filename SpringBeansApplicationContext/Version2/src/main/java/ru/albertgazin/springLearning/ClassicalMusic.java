@@ -2,6 +2,7 @@ package ru.albertgazin.springLearning;
 
 import org.springframework.stereotype.Component;
 
+@Component
 public class ClassicalMusic implements Music {
     private static ClassicalMusic classicalMusic;
 

@@ -1,11 +1,13 @@
 package ru.albertgazin.springLearning;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class MusicPlayer {
     @Autowired
+    @Qualifier("jazzMusic")
     private Music music;
     private String name;
     private int volume;

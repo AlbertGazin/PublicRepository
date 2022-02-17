@@ -1,8 +1,13 @@
 package ru.albertgazin.springLearning;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 @Component
+@Scope("singleton")
 public class ClassicalMusic implements Music {
     private static ClassicalMusic classicalMusic;
 
@@ -17,10 +22,12 @@ public class ClassicalMusic implements Music {
         }
     }
 
+    @PostConstruct
     public void initMethod() {
         System.out.println("ClassicalMusic's init method");
     }
 
+    @PreDestroy
     public void destroyMethod() {
         System.out.println("ClassicalMusic's destroy method");
     }

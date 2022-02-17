@@ -1,0 +1,88 @@
+spring:
+  datasource:
+    url: jdbc:${JAWSDB_URL:mysql://localhost:3306/aykh0ghzfa0vl07o}
+#    jdbc:mysql://localhost:3306/diploma_scheme?useSSL=false&serverTimezone=UTC
+#    Europe/Moscow
+#    username: root
+#    password: qwerty12345
+
+  jpa:
+    hibernate.ddl-auto: validate
+    show-sql: false
+
+  servlet:
+    multipart:
+      max-file-size: -1
+      max-request-size: -1
+
+server:
+  port: ${PORT:8080}
+
+blog:
+  title: Developers Blog
+  subtitle: Рассказы разработчиков
+  phone: +7 987 275-97-51
+  email: gazin.albert@mail.ru
+  copyright: Альберт Газин
+  copyrightFrom: 2005
+
+email:
+  from: "albertino.gazinio@gmail.com"
+  pass: "Alberto1988gmailcom@"
+  subject: "Restore password"
+  host: "smtp.gmail.com"
+  port: 587
+  protocol: "TLSv1.2"
+  passRestoreLink: "http://localhost:8080/login/change-password/"
+
+image:
+  avatarWidth: 36
+  avatarHeight: 36
+  otherImageWidth: 300
+  otherImageHeight: 500
+  uploadFolder: "src/main/upload/"
+  imagePathForLink: "/upload/"
+  imageSizeTooLargeError: "Размер файла превышает допустимый размер"
+  imageFormatIsIncorrectError: "Формат файла некорректен"
+  photoNotUploadedError: "Фотография не загружена"
+  validFormat1: "jpg"
+  validFormat2: "png"
+  validSize: 5
+
+captcha:
+  width: 200
+  height: 200
+  secretCodeLength: 128
+  captchaLength: 4
+  errorMessage: "При получении каптчи произошла ошибка"
+  captchaPath: "data:image/png;base64, "
+  timeZone: "UTC"
+#  "Europe/Moscow"
+
+settings:
+  multiUserMode: "MULTIUSER_MODE"
+  postPremoderation: "POST_PREMODERATION"
+  statisticsIsPublic: "STATISTICS_IS_PUBLIC"
+  errorMsg: "Не найдены глобальные настройки с кодом = "
+
+user:
+  emailAlreadyExists: "Этот e-mail уже зарегистрирован"
+  wrongName: "Имя указано неверно"
+  incorrectPassword: "Пароль короче 6-ти символов"
+  incorrectCaptcha: "Код с картинки введён неверно"
+  incorrectEmail: "Email адрес некорректен"
+  incorrectChangePassLink: "Ссылка для восстановления пароля устарела.
+  <a href=
+  \"/auth/restore\">Запросить ссылку снова</a>"
+
+post:
+  tooShortTextError: "Текст поста слишком короткий"
+  tooShortTitleError: "Заголовок слишком короткий"
+  emptyTextError: "Текст пустой"
+  emptyTitleError: "Заголовок пустой"
+  minimalLengthOfPostsText: 50
+  minimalLengthOfPostsTitle: 3
+  minimalLengthOfComment: 3
+  activePost: 1
+  inactivePost: 0
+  announceLength: 150

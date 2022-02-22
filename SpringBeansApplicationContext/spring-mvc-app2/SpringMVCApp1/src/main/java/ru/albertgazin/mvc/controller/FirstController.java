@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class FirstController {
 
     @GetMapping("/hello")
-    public String helloPage(@RequestParam("name") String name) {
+    public String helloPage(@RequestParam(value = "name", required = false) String name) {
         System.out.println(name);
         return "first/hello";
     }
